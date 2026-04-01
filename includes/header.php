@@ -6,6 +6,7 @@ $navItems = [
   ['href' => 'about',      'label' => 'About'],
   ['href' => 'franchise',  'label' => 'Franchise'],
   ['href' => 'advertising','label' => 'Advertising'],
+  ['href' => 'contact',    'label' => 'Contact'],
 ];
 ?>
   <header id="header">
@@ -22,7 +23,6 @@ $navItems = [
 <?php foreach ($navItems as $item): ?>
         <li><a href="<?= $item['href'] ?>.php"<?= $currentPage === $item['href'] ? ' class="active"' : '' ?>><?= $item['label'] ?></a></li>
 <?php endforeach; ?>
-        <li><a href="index.php#contact"<?= $currentPage === 'index' ? ' href="#contact"' : '' ?>>Contact</a></li>
       </ul>
 
       <div class="nav-actions">

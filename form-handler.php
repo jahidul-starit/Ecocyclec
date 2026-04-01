@@ -81,6 +81,25 @@ switch ($formType) {
         $body    = "Name:    $name\nEmail:   $email\n\nMessage:\n$message";
         break;
 
+    case 'support':
+        $name       = clean($_POST['name']       ?? '');
+        $phone      = clean($_POST['phone']      ?? '');
+        $issueType  = clean($_POST['issue_type'] ?? '');
+        $message    = clean($_POST['message']    ?? '');
+        $subject    = "Rider Support Request — $issueType ($name)";
+        $body       = "Name:       $name\nPhone:      $phone\nIssue Type: $issueType\n\nDescription:\n$message";
+        break;
+
+    case 'partnership':
+        $name            = clean($_POST['name']             ?? '');
+        $company         = clean($_POST['company']          ?? '');
+        $email           = clean($_POST['email']            ?? '');
+        $partnershipType = clean($_POST['partnership_type'] ?? '');
+        $message         = clean($_POST['message']          ?? '');
+        $subject         = "Partnership Enquiry — $partnershipType ($company)";
+        $body            = "Name:              $name\nCompany:           $company\nEmail:             $email\nPartnership Type:  $partnershipType\n\nMessage:\n$message";
+        break;
+
     default:
         // Unknown form type — redirect back
         $referer = $_SERVER['HTTP_REFERER'] ?? 'index.php';

@@ -211,19 +211,19 @@ $pageJs    = '';
         <div class="chart-card">
           <h4>Our Fleet Efficiency</h4>
           <div class="bar-chart">
-            <div class="bar-group"><span class="bar-label">Q1</span><div class="bar" style="--bar-h:60%"><span>60%</span></div></div>
-            <div class="bar-group"><span class="bar-label">Q2</span><div class="bar" style="--bar-h:72%"><span>72%</span></div></div>
-            <div class="bar-group"><span class="bar-label">Q3</span><div class="bar" style="--bar-h:85%"><span>85%</span></div></div>
-            <div class="bar-group"><span class="bar-label">Q4</span><div class="bar" style="--bar-h:93%"><span>93%</span></div></div>
+            <div class="bar-group"><div class="bar" style="--bar-h:82px"><span>60%</span></div><span class="bar-label">Q1</span></div>
+            <div class="bar-group"><div class="bar" style="--bar-h:98px"><span>72%</span></div><span class="bar-label">Q2</span></div>
+            <div class="bar-group"><div class="bar" style="--bar-h:116px"><span>85%</span></div><span class="bar-label">Q3</span></div>
+            <div class="bar-group"><div class="bar" style="--bar-h:127px"><span>93%</span></div><span class="bar-label">Q4</span></div>
           </div>
         </div>
         <div class="chart-card">
           <h4>Rider Earnings Growth</h4>
           <div class="bar-chart bar-chart-earnings">
-            <div class="bar-group"><span class="bar-label">Jan</span><div class="bar bar-accent" style="--bar-h:40%"><span>৳8k</span></div></div>
-            <div class="bar-group"><span class="bar-label">Apr</span><div class="bar bar-accent" style="--bar-h:55%"><span>৳11k</span></div></div>
-            <div class="bar-group"><span class="bar-label">Jul</span><div class="bar bar-accent" style="--bar-h:70%"><span>৳14k</span></div></div>
-            <div class="bar-group"><span class="bar-label">Oct</span><div class="bar bar-accent" style="--bar-h:90%"><span>৳18k</span></div></div>
+            <div class="bar-group"><div class="bar bar-accent" style="--bar-h:54px"><span>৳8k</span></div><span class="bar-label">Jan</span></div>
+            <div class="bar-group"><div class="bar bar-accent" style="--bar-h:75px"><span>৳11k</span></div><span class="bar-label">Apr</span></div>
+            <div class="bar-group"><div class="bar bar-accent" style="--bar-h:95px"><span>৳14k</span></div><span class="bar-label">Jul</span></div>
+            <div class="bar-group"><div class="bar bar-accent" style="--bar-h:122px"><span>৳18k</span></div><span class="bar-label">Oct</span></div>
           </div>
         </div>
         <div class="chart-card">

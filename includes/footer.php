@@ -23,7 +23,7 @@
             <li><a href="services.php">Daily Rental</a></li>
             <li><a href="services.php">Monthly Plan</a></li>
             <li><a href="services.php">E-Rickshaw Plan</a></li>
-            <li><a href="index.php#contact">Find a Hub</a></li>
+            <li><a href="contact.php">Find a Hub</a></li>
           </ul>
         </div>
         <div class="footer-links">
@@ -39,7 +39,7 @@
           <h4>Company</h4>
           <ul>
             <li><a href="about.php">About Us</a></li>
-            <li><a href="index.php#contact">Contact</a></li>
+            <li><a href="contact.php">Contact</a></li>
             <li><a href="#">Privacy Policy</a></li>
             <li><a href="#">Terms of Service</a></li>
           </ul>
