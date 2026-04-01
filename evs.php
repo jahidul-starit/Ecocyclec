@@ -75,12 +75,29 @@ $pageJs    = 'evs.js';
             <li><div class="rev-perk-icon"><i class="fa-solid fa-bangladeshi-taka-sign"></i></div><div><strong>Flexible Pricing</strong><p>Daily, weekly or monthly plans — from ৳ 100/day.</p></div></li>
             <li><div class="rev-perk-icon"><i class="fa-solid fa-headset"></i></div><div><strong>24/7 Rider Support</strong><p>Our team is available anytime for roadside assistance.</p></div></li>
           </ul>
+
+          <!-- Required Documents Box -->
+          <div class="rev-docs-box">
+            <div class="rev-docs-header">
+              <i class="fa-solid fa-folder-open"></i>
+              <h4>Required Documents</h4>
+            </div>
+            <p class="rev-docs-intro">Thank you for your interest in renting an Ezygo bike. Please bring the following documents when picking up your vehicle:</p>
+            <ul class="rev-docs-list">
+              <li><i class="fa-solid fa-id-card"></i> National ID Card (NID) <em>or</em> Valid Passport</li>
+              <li><i class="fa-solid fa-camera"></i> Two (2) copies of passport-size photographs</li>
+              <li><i class="fa-solid fa-people-arrows"></i> Parent's National ID Card</li>
+              <li><i class="fa-solid fa-file-invoice"></i> Copy of home electricity <em>or</em> water bill</li>
+              <li><i class="fa-solid fa-mobile-screen"></i> Active mobile phone number</li>
+            </ul>
+          </div>
         </div>
 
         <!-- Right — form -->
         <div class="rev-form-wrap ef-fade">
           <div class="rev-form-card">
             <h3 class="rev-form-title"><i class="fa-solid fa-motorcycle"></i> Rental Application</h3>
+            <p class="rev-form-note"><i class="fa-solid fa-circle-info"></i> Please have your required documents ready before submission. Our team will verify them at pickup.</p>
 
             <form class="rev-form" action="form-handler.php" method="POST" id="rentEvForm" novalidate>
               <input type="hidden" name="form_type" value="rent_ev">
