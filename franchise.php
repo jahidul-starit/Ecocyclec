@@ -174,7 +174,7 @@ $pageJs    = 'franchise.js';
           <h2>Ready to Start Your<br>Franchise Journey?</h2>
           <p>Fill out the form and our partnership team will reach out within 24 hours.</p>
           <div class="fr-contact-info">
-            <div class="fr-info-row"><i class="fa-solid fa-phone"></i> <span>+880 1XXX-XXXXXX</span></div>
+            <div class="fr-info-row"><i class="fa-solid fa-phone"></i> <span>01828-721222</span></div>
             <div class="fr-info-row"><i class="fa-solid fa-envelope"></i> <span>franchise@ezygobd.com</span></div>
             <div class="fr-info-row"><i class="fa-solid fa-location-dot"></i> <span>Dhaka, Bangladesh</span></div>
           </div>

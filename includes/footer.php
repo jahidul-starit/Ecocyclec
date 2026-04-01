@@ -46,7 +46,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; <?= date('Y') ?> EzygoBD. All rights reserved. Serving Bangladesh with clean mobility.</p>
+        <p>&copy; <?= date('Y') ?> Ezygo Electric Limited. All rights reserved. Serving Bangladesh with clean mobility.</p>
       </div>
     </div>
   </footer>

@@ -528,8 +528,8 @@ $pageJs    = '';
           <h3>Contact Us</h3>
           <ul class="contact-list">
             <li><i class="fa-solid fa-envelope"></i> hello@ezygobd.com</li>
-            <li><i class="fa-solid fa-phone"></i> +880 1700-000000</li>
-            <li><i class="fa-solid fa-location-dot"></i> Level 5, Green Tower, Gulshan-2, Dhaka 1212</li>
+            <li><i class="fa-solid fa-phone"></i> 01828-721222 / 01576-597666</li>
+            <li><i class="fa-solid fa-location-dot"></i> Plot#34, 7th Floor, Road Sonargaon Janapath Rd, Dhaka</li>
           </ul>
         </div>
         <div class="contact-col">

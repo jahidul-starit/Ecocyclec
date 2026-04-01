@@ -41,7 +41,7 @@ $pageJs    = 'contact.js';
         <div class="ct-info-card ct-fade">
           <div class="ct-info-icon" style="--ic:#e8f5e9;--ic-fg:#00c853"><i class="fa-solid fa-phone"></i></div>
           <h4>Phone / WhatsApp</h4>
-          <p><a href="tel:+8801700000000">+880 1700-000000</a></p>
+          <p><a href="tel:+8801828721222">01828-721222</a> / <a href="tel:+8801576597666">01576-597666</a></p>
           <p style="font-size:.82rem;color:var(--clr-muted);margin-top:4px">Available 9 AM – 9 PM</p>
         </div>
 
@@ -55,7 +55,13 @@ $pageJs    = 'contact.js';
         <div class="ct-info-card ct-fade">
           <div class="ct-info-icon" style="--ic:#fce4ec;--ic-fg:#c2185b"><i class="fa-solid fa-location-dot"></i></div>
           <h4>Head Office</h4>
-          <p>Level 5, Green Tower<br>Gulshan-2, Dhaka 1212</p>
+          <p>Plot#34, 7th Floor, Road<br>Sonargaon Janapath Rd, Dhaka</p>
+        </div>
+
+        <div class="ct-info-card ct-fade">
+          <div class="ct-info-icon" style="--ic:#e8eaf6;--ic-fg:#3949ab"><i class="fa-solid fa-building-columns"></i></div>
+          <h4>Corporate Office</h4>
+          <p>6th Floor, Chattogram Software<br>Technology Park, Agrabad, Chittagong</p>
         </div>
 
         <div class="ct-info-card ct-fade">
@@ -84,14 +90,21 @@ $pageJs    = 'contact.js';
               <div class="ct-detail-icon"><i class="fa-solid fa-building"></i></div>
               <div class="ct-detail-body">
                 <strong>Head Office</strong>
-                <span>Level 5, Green Tower, Gulshan-2, Dhaka 1212, Bangladesh</span>
+                <span>Plot#34, 7th Floor, Road Sonargaon Janapath Rd, Dhaka</span>
+              </div>
+            </li>
+            <li class="ct-detail-item">
+              <div class="ct-detail-icon"><i class="fa-solid fa-building-columns"></i></div>
+              <div class="ct-detail-body">
+                <strong>Corporate Office</strong>
+                <span>6th Floor, Chattogram Software Technology Park, Agrabad, Chittagong</span>
               </div>
             </li>
             <li class="ct-detail-item">
               <div class="ct-detail-icon"><i class="fa-solid fa-phone"></i></div>
               <div class="ct-detail-body">
                 <strong>Phone / WhatsApp</strong>
-                <a href="tel:+8801700000000">+880 1700-000000</a>
+                <a href="tel:+8801828721222">01828-721222</a> / <a href="tel:+8801576597666">01576-597666</a>
               </div>
             </li>
             <li class="ct-detail-item">
@@ -269,7 +282,7 @@ $pageJs    = 'contact.js';
     <div class="container">
       <div class="ct-map-inner ct-fade">
         <i class="fa-solid fa-map-location-dot"></i>
-        <p>Interactive map coming soon — Level 5, Green Tower, Gulshan-2, Dhaka</p>
+        <p>Interactive map coming soon — Plot#34, 7th Floor, Road Sonargaon Janapath Rd, Dhaka</p>
       </div>
     </div>
   </section>
@@ -294,7 +307,7 @@ $pageJs    = 'contact.js';
         </div>
         <div class="ct-faq-item ct-fade">
           <h4><i class="fa-solid fa-circle-question"></i> Where do I report a vehicle issue?</h4>
-          <p>Use the "Rider Support" tab in the form above or call our 24/7 helpline at +880 1700-000000 for immediate assistance.</p>
+          <p>Use the "Rider Support" tab in the form above or call our 24/7 helpline at 01828-721222 for immediate assistance.</p>
         </div>
         <div class="ct-faq-item ct-fade">
           <h4><i class="fa-solid fa-circle-question"></i> How do I discuss a franchise or investment?</h4>
@@ -302,7 +315,7 @@ $pageJs    = 'contact.js';
         </div>
         <div class="ct-faq-item ct-fade">
           <h4><i class="fa-solid fa-circle-question"></i> Can I visit the office in person?</h4>
-          <p>Yes — our head office is at Level 5, Green Tower, Gulshan-2, Dhaka. Please call ahead to schedule a meeting.</p>
+          <p>Yes — our head office is at Plot#34, 7th Floor, Road Sonargaon Janapath Rd, Dhaka. Please call ahead to schedule a meeting.</p>
         </div>
         <div class="ct-faq-item ct-fade">
           <h4><i class="fa-solid fa-circle-question"></i> Have a billing or account problem?</h4>

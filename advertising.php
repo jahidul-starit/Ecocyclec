@@ -223,7 +223,7 @@ $pageJs    = 'advertising.js';
           <h2>Advertise Your<br>Brand Today</h2>
           <p>Fill out the form and our advertising team will reach out within 24 hours with a custom proposal.</p>
           <div class="ad-contact-info">
-            <div class="ad-info-row"><i class="fa-solid fa-phone"></i> <span>+880 1XXX-XXXXXX</span></div>
+            <div class="ad-info-row"><i class="fa-solid fa-phone"></i> <span>01828-721222</span></div>
             <div class="ad-info-row"><i class="fa-solid fa-envelope"></i> <span>ads@ezygobd.com</span></div>
             <div class="ad-info-row"><i class="fa-solid fa-location-dot"></i> <span>Dhaka, Bangladesh</span></div>
           </div>

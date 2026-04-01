@@ -330,8 +330,8 @@ $pageJs    = 'evs.js';
           <h2>Get In Touch!</h2>
           <p>Whether you're a rider, a business, or an investor — our team is ready to help you go electric.</p>
           <ul class="ec-detail-list">
-            <li><div class="ec-det-icon"><i class="fa-solid fa-location-dot"></i></div><div><strong>Head Office</strong><p>Dhanmondi R/A, Dhaka 1205, Bangladesh</p></div></li>
-            <li><div class="ec-det-icon"><i class="fa-solid fa-phone"></i></div><div><strong>Phone / WhatsApp</strong><p>+880 1700-000000</p></div></li>
+            <li><div class="ec-det-icon"><i class="fa-solid fa-location-dot"></i></div><div><strong>Head Office</strong><p>Plot#34, 7th Floor, Road Sonargaon Janapath Rd, Dhaka</p></div></li>
+            <li><div class="ec-det-icon"><i class="fa-solid fa-phone"></i></div><div><strong>Phone / WhatsApp</strong><p>01828-721222 / 01576-597666</p></div></li>
             <li><div class="ec-det-icon"><i class="fa-solid fa-envelope"></i></div><div><strong>Email</strong><p>hello@ezygobd.com</p></div></li>
           </ul>
           <div class="ec-social">
