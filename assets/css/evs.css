@@ -1001,3 +1001,179 @@
   .ec-form-row { grid-template-columns: 1fr; }
   .wl-mini-stats { gap: 1rem; }
 }
+
+/* ===================================================
+   RENT OUR EV SECTION
+   =================================================== */
+.rent-ev {
+  background: linear-gradient(135deg, #0a1f10 0%, #071409 100%);
+  padding: 6rem 0;
+  position: relative;
+  overflow: hidden;
+}
+.rent-ev::before {
+  content: '';
+  position: absolute;
+  top: -160px; right: -160px;
+  width: 480px; height: 480px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,200,83,.14) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Layout */
+.rev-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+/* Left info */
+.rev-title {
+  font-size: clamp(2rem, 4vw, 2.9rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -.5px;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+.rev-title span { color: var(--clr-primary); }
+.rev-desc {
+  color: rgba(255,255,255,.72);
+  font-size: .97rem;
+  line-height: 1.75;
+  margin-bottom: 2rem;
+}
+
+.rev-perks {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+.rev-perks li {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.rev-perk-icon {
+  width: 42px; height: 42px;
+  min-width: 42px;
+  border-radius: 10px;
+  background: rgba(0,200,83,.15);
+  border: 1px solid rgba(0,200,83,.25);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--clr-primary);
+  font-size: 1rem;
+}
+.rev-perks li div strong {
+  display: block;
+  color: #fff;
+  font-size: .92rem;
+  margin-bottom: .2rem;
+}
+.rev-perks li div p {
+  color: rgba(255,255,255,.6);
+  font-size: .82rem;
+  margin: 0;
+}
+
+/* Right form card */
+.rev-form-wrap { }
+.rev-form-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 24px 64px rgba(0,0,0,.45);
+}
+[data-theme="dark"] .rev-form-card {
+  background: var(--clr-surface);
+  border: 1px solid rgba(255,255,255,.08);
+}
+.rev-form-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--clr-text);
+  margin-bottom: 1.6rem;
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+}
+.rev-form-title i { color: var(--clr-primary); }
+
+/* Form elements */
+.rev-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.rev-group {
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+  margin-bottom: 1rem;
+}
+.rev-row .rev-group { margin-bottom: 0; }
+.rev-group label {
+  font-size: .8rem;
+  font-weight: 600;
+  color: var(--clr-text);
+  letter-spacing: .3px;
+}
+.rev-group label span { color: #e53935; }
+.rev-group input,
+.rev-group select,
+.rev-group textarea {
+  width: 100%;
+  padding: .65rem .9rem;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 9px;
+  font-size: .88rem;
+  font-family: inherit;
+  background: #f8fafc;
+  color: var(--clr-text);
+  transition: border-color .2s, box-shadow .2s;
+  outline: none;
+}
+[data-theme="dark"] .rev-group input,
+[data-theme="dark"] .rev-group select,
+[data-theme="dark"] .rev-group textarea {
+  background: rgba(255,255,255,.06);
+  border-color: rgba(255,255,255,.12);
+  color: var(--clr-text);
+}
+.rev-group input:focus,
+.rev-group select:focus,
+.rev-group textarea:focus {
+  border-color: var(--clr-primary);
+  box-shadow: 0 0 0 3px rgba(0,200,83,.15);
+  background: #fff;
+}
+[data-theme="dark"] .rev-group input:focus,
+[data-theme="dark"] .rev-group select:focus,
+[data-theme="dark"] .rev-group textarea:focus {
+  background: rgba(255,255,255,.09);
+}
+.rev-group textarea { resize: vertical; min-height: 88px; }
+
+.rev-submit {
+  width: 100%;
+  justify-content: center;
+  padding: .88rem !important;
+  font-size: .95rem !important;
+  border-radius: 10px !important;
+  margin-top: .5rem;
+  gap: .6rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .rev-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+@media (max-width: 640px) {
+  .rent-ev { padding: 4rem 0; }
+  .rev-form-card { padding: 1.6rem; }
+  .rev-row { grid-template-columns: 1fr; }
+}

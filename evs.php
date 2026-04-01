@@ -58,6 +58,102 @@ $pageJs    = 'evs.js';
     </div>
   </section>
 
+  <!-- ============ RENT OUR EV ============ -->
+  <section class="rent-ev" id="rent-ev">
+    <div class="container">
+      <div class="rev-layout">
+
+        <!-- Left — info -->
+        <div class="rev-info ef-fade">
+          <span class="section-eyebrow">Get Behind the Wheel</span>
+          <h2 class="rev-title">Rent Our EV<br><span>Start Riding Today</span></h2>
+          <p class="rev-desc">Fill out the form and our team will confirm your booking within a few hours. No hidden charges — just clean, affordable electric mobility.</p>
+
+          <ul class="rev-perks">
+            <li><div class="rev-perk-icon"><i class="fa-solid fa-bolt"></i></div><div><strong>Instant Confirmation</strong><p>Booking confirmed via SMS &amp; email within 2 hours.</p></div></li>
+            <li><div class="rev-perk-icon"><i class="fa-solid fa-shield-halved"></i></div><div><strong>Fully Insured</strong><p>Third-party insurance included on every rental plan.</p></div></li>
+            <li><div class="rev-perk-icon"><i class="fa-solid fa-bangladeshi-taka-sign"></i></div><div><strong>Flexible Pricing</strong><p>Daily, weekly or monthly plans — from ৳ 100/day.</p></div></li>
+            <li><div class="rev-perk-icon"><i class="fa-solid fa-headset"></i></div><div><strong>24/7 Rider Support</strong><p>Our team is available anytime for roadside assistance.</p></div></li>
+          </ul>
+        </div>
+
+        <!-- Right — form -->
+        <div class="rev-form-wrap ef-fade">
+          <div class="rev-form-card">
+            <h3 class="rev-form-title"><i class="fa-solid fa-motorcycle"></i> Rental Application</h3>
+
+            <form class="rev-form" action="form-handler.php" method="POST" id="rentEvForm" novalidate>
+              <input type="hidden" name="form_type" value="rent_ev">
+
+              <div class="rev-row">
+                <div class="rev-group">
+                  <label for="revName">Full Name <span>*</span></label>
+                  <input type="text" id="revName" name="name" placeholder="Your full name" required>
+                </div>
+                <div class="rev-group">
+                  <label for="revPhone">Phone Number <span>*</span></label>
+                  <input type="tel" id="revPhone" name="phone" placeholder="01XXXXXXXXX" required>
+                </div>
+              </div>
+
+              <div class="rev-group">
+                <label for="revEmail">Email Address <span>*</span></label>
+                <input type="email" id="revEmail" name="email" placeholder="you@example.com" required>
+              </div>
+
+              <div class="rev-row">
+                <div class="rev-group">
+                  <label for="revNid">NID Number <span>*</span></label>
+                  <input type="text" id="revNid" name="nid" placeholder="National ID number" required>
+                </div>
+                <div class="rev-group">
+                  <label for="revGender">Gender <span>*</span></label>
+                  <select id="revGender" name="gender" required>
+                    <option value="">Select gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="rev-row">
+                <div class="rev-group">
+                  <label for="revVehicle">Vehicle Type</label>
+                  <select id="revVehicle" name="vehicle_type">
+                    <option value="">Any available</option>
+                    <option value="E-Scooter">EzyGo E-Scooter</option>
+                    <option value="E-Bike">EzyRide E-Bike</option>
+                    <option value="E-Rickshaw">EzyHaul E-Rickshaw</option>
+                  </select>
+                </div>
+                <div class="rev-group">
+                  <label for="revPlan">Rental Plan</label>
+                  <select id="revPlan" name="rental_plan">
+                    <option value="">Select plan</option>
+                    <option value="Daily">Daily</option>
+                    <option value="Weekly">Weekly</option>
+                    <option value="Monthly">Monthly</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="rev-group">
+                <label for="revAddress">Pickup / Home Address <span>*</span></label>
+                <textarea id="revAddress" name="address" rows="3" placeholder="Your full address including area, city" required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary rev-submit">
+                Submit Rental Request <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- ============ WHITE LABEL SOLUTIONS ============ -->
   <section class="evs-whitelabel">
     <div class="container">

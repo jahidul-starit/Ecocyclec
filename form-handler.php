@@ -90,6 +90,19 @@ switch ($formType) {
         $body       = "Name:       $name\nPhone:      $phone\nIssue Type: $issueType\n\nDescription:\n$message";
         break;
 
+    case 'rent_ev':
+        $name        = clean($_POST['name']         ?? '');
+        $phone       = clean($_POST['phone']        ?? '');
+        $email       = clean($_POST['email']        ?? '');
+        $nid         = clean($_POST['nid']          ?? '');
+        $gender      = clean($_POST['gender']       ?? '');
+        $address     = clean($_POST['address']      ?? '');
+        $vehicleType = clean($_POST['vehicle_type'] ?? 'Any');
+        $rentalPlan  = clean($_POST['rental_plan']  ?? 'Not specified');
+        $subject = "EV Rental Request — $name ($vehicleType)";
+        $body    = "Name:         $name\nPhone:        $phone\nEmail:        $email\nNID:          $nid\nGender:       $gender\nAddress:      $address\nVehicle Type: $vehicleType\nRental Plan:  $rentalPlan";
+        break;
+
     case 'partnership':
         $name            = clean($_POST['name']             ?? '');
         $company         = clean($_POST['company']          ?? '');
