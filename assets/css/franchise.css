@@ -643,3 +643,20 @@
     padding: 1.2rem;
   }
 }
+
+/* ===================================================
+   DARK MODE
+   =================================================== */
+body.dark-mode .fr-intro { background: #111827; }
+body.dark-mode .fr-model-card { background: #1a2233; border-color: #2d3a4e; }
+body.dark-mode .fr-model-card.active,
+body.dark-mode .fr-model-card:hover { border-color: var(--clr-primary); background: #1e2840; }
+body.dark-mode .fr-table-section { background: #0f1620; }
+body.dark-mode .fr-table { border-color: #2d3a4e; }
+body.dark-mode .fr-table th { background: #1a2233; color: #e2e8f0; }
+body.dark-mode .fr-table td { border-color: #2d3a4e; color: #cbd5e0; }
+body.dark-mode .fr-table tr:nth-child(even) td { background: #1a2233; }
+body.dark-mode .fr-contact-inner { background: #1a2233; }
+body.dark-mode .fr-contact-text h2 { color: #e2e8f0; }
+body.dark-mode .fr-contact-text p { color: #94a3b8; }
+body.dark-mode .fr-info-row { color: #cbd5e0; }

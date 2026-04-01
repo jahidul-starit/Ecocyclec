@@ -470,3 +470,27 @@
   .ct-form-row { grid-template-columns: 1fr; }
   .ct-tabs { flex-direction: column; }
 }
+
+/* ===================================================
+   DARK MODE
+   =================================================== */
+body.dark-mode .ct-hero { background: linear-gradient(135deg, #0a1520 0%, #081020 60%, #050c18 100%); }
+body.dark-mode .ct-info-strip { background: #0f1620; }
+body.dark-mode .ct-info-card { background: #1a2233; box-shadow: 0 4px 20px rgba(0,0,0,.4); }
+body.dark-mode .ct-info-card h4 { color: rgba(255,255,255,.6); }
+body.dark-mode .ct-info-card p,
+body.dark-mode .ct-info-card a { color: #e2e8f0; }
+body.dark-mode .ct-main { background: #111827; }
+body.dark-mode .ct-detail-icon { background: rgba(0,200,83,.15); }
+body.dark-mode .ct-detail-body strong { color: rgba(255,255,255,.55); }
+body.dark-mode .ct-detail-body span,
+body.dark-mode .ct-detail-body a { color: #e2e8f0; }
+body.dark-mode .ct-hours { background: #1a2233; border-color: #2d3a4e; }
+body.dark-mode .ct-hours h4 { color: #e2e8f0; }
+body.dark-mode .ct-hours-row span:first-child { color: #94a3b8; }
+body.dark-mode .ct-form-wrap { background: #1a2233; }
+body.dark-mode .ct-tabs { background: #0f1620; }
+body.dark-mode .ct-tab-btn { color: #94a3b8; }
+body.dark-mode .ct-tab-btn.active { color: var(--clr-primary); border-bottom-color: var(--clr-primary); }
+body.dark-mode .ct-map-inner { background: #1a2233; color: #94a3b8; }
+body.dark-mode .ct-faq-item { background: #1a2233; }

@@ -421,3 +421,16 @@
   .svc-cta-buttons { justify-content: center; }
   .svc-menu-wrapper { padding-top: calc(var(--header-h) + 1.5rem); }
 }
+
+/* ===================================================
+   DARK MODE
+   =================================================== */
+body.dark-mode .svc-hero { background: linear-gradient(135deg, #0a1520 0%, #0e1f10 100%); }
+body.dark-mode .svc-plan { background: #111827; }
+body.dark-mode .svc-plan-card { background: #1a2233; border-color: #2d3a4e; }
+body.dark-mode .svc-plan-card.featured { border-color: var(--clr-primary); background: #1e2840; }
+body.dark-mode .svc-features { background: #0f1620; }
+body.dark-mode .svc-feat-item { background: #1a2233; }
+body.dark-mode .svc-fleet { background: #111827; }
+body.dark-mode .svc-fleet-card { background: #1a2233; border-color: #2d3a4e; }
+body.dark-mode .svc-cta { background: linear-gradient(135deg, #013220, #024020); }

@@ -282,4 +282,49 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  /* ---------- Form status toast ---------- */
+  const showToast = (type) => {
+    let toast = document.getElementById('ezygoToast');
+    if (!toast) {
+      toast = document.createElement('div');
+      toast.id = 'ezygoToast';
+      toast.className = 'ezygo-toast';
+      toast.setAttribute('role', 'status');
+      toast.setAttribute('aria-live', 'polite');
+      toast.innerHTML = `
+        <span class="ezygo-toast-icon" id="toastIcon"></span>
+        <div class="ezygo-toast-body">
+          <strong id="toastTitle"></strong>
+          <p id="toastMsg"></p>
+        </div>
+        <button class="ezygo-toast-close" aria-label="Close notification">&times;</button>`;
+      document.body.appendChild(toast);
+      toast.querySelector('.ezygo-toast-close').addEventListener('click', () => {
+        toast.classList.remove('show');
+      });
+    }
+    const isSuccess = type === 'success';
+    toast.className = 'ezygo-toast' + (isSuccess ? '' : ' toast-error');
+    const iconEl = toast.querySelector('#toastIcon');
+    iconEl.className = `ezygo-toast-icon ${isSuccess ? 'success' : 'error'}`;
+    iconEl.innerHTML = isSuccess
+      ? '<i class="fa-solid fa-circle-check"></i>'
+      : '<i class="fa-solid fa-circle-exclamation"></i>';
+    toast.querySelector('#toastTitle').textContent = isSuccess ? 'Message sent!' : 'Sending failed';
+    toast.querySelector('#toastMsg').textContent  = isSuccess
+      ? 'Thank you! Our team will respond within 24 hours.'
+      : 'Something went wrong. Please try calling us directly.';
+    requestAnimationFrame(() => toast.classList.add('show'));
+    setTimeout(() => toast.classList.remove('show'), 6000);
+    // Clean ?status= from URL
+    const url = new URL(window.location);
+    url.searchParams.delete('status');
+    window.history.replaceState({}, '', url);
+  };
+
+  const urlParams   = new URLSearchParams(window.location.search);
+  const formStatus  = urlParams.get('status');
+  if (formStatus === 'success' || formStatus === 'error') showToast(formStatus);
+
 });

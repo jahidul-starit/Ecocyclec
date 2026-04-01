@@ -1087,8 +1087,8 @@
   padding: 2.5rem;
   box-shadow: 0 24px 64px rgba(0,0,0,.45);
 }
-[data-theme="dark"] .rev-form-card {
-  background: var(--clr-surface);
+body.dark-mode .rev-form-card {
+  background: #1e2840;
   border: 1px solid rgba(255,255,255,.08);
 }
 .rev-form-title {
@@ -1137,12 +1137,12 @@
   transition: border-color .2s, box-shadow .2s;
   outline: none;
 }
-[data-theme="dark"] .rev-group input,
-[data-theme="dark"] .rev-group select,
-[data-theme="dark"] .rev-group textarea {
-  background: rgba(255,255,255,.06);
-  border-color: rgba(255,255,255,.12);
-  color: var(--clr-text);
+body.dark-mode .rev-group input,
+body.dark-mode .rev-group select,
+body.dark-mode .rev-group textarea {
+  background: #1a2233;
+  border-color: #2d3a4e;
+  color: #e2e8f0;
 }
 .rev-group input:focus,
 .rev-group select:focus,
@@ -1151,10 +1151,10 @@
   box-shadow: 0 0 0 3px rgba(0,200,83,.15);
   background: #fff;
 }
-[data-theme="dark"] .rev-group input:focus,
-[data-theme="dark"] .rev-group select:focus,
-[data-theme="dark"] .rev-group textarea:focus {
-  background: rgba(255,255,255,.09);
+body.dark-mode .rev-group input:focus,
+body.dark-mode .rev-group select:focus,
+body.dark-mode .rev-group textarea:focus {
+  background: #1e2840;
 }
 .rev-group textarea { resize: vertical; min-height: 88px; }
 
@@ -1237,7 +1237,7 @@
   align-items: flex-start;
   line-height: 1.5;
 }
-[data-theme="dark"] .rev-form-note {
+body.dark-mode .rev-form-note {
   background: rgba(0,200,83,.07);
   color: rgba(255,255,255,.6);
 }

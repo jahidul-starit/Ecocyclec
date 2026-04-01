@@ -1396,3 +1396,189 @@ body.dark-mode .theme-toggle .fa-moon { opacity: 1; }
   /* Hide Book Now pill on tiny screens — it lives in the drawer */
   .btn-nav-cta:not(.drawer-cta) { display: none; }
 }
+
+/* ===================================================
+   GLOBAL SECTION TYPOGRAPHY
+   =================================================== */
+.section-eyebrow {
+  display: inline-block;
+  font-size: .72rem;
+  font-weight: var(--fw-semi);
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--clr-primary);
+  margin-bottom: .9rem;
+}
+.section-title {
+  font-size: clamp(1.7rem, 4vw, 2.5rem);
+  font-weight: var(--fw-extra);
+  line-height: 1.2;
+  color: var(--clr-dark);
+  letter-spacing: -.3px;
+  margin-bottom: .6rem;
+}
+.section-sub {
+  font-size: 1rem;
+  color: var(--clr-muted);
+  line-height: 1.75;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Spacing utilities */
+.mt-1 { margin-top: 1rem; }
+.mt-2 { margin-top: 2rem; }
+.mb-1 { margin-bottom: 1rem; }
+.mb-2 { margin-bottom: 2rem; }
+
+/* ===================================================
+   DARK MODE — Comprehensive overrides
+   =================================================== */
+body.dark-mode {
+  background: #111827;
+  color: #cbd5e0;
+
+  /* Token overrides */
+  --clr-text:     #e2e8f0;
+  --clr-dark:     #f1f5f9;
+  --clr-muted:    #94a3b8;
+  --clr-gray-100: #1a2233;
+  --clr-gray-200: #2d3a4e;
+  --clr-gray-500: #94a3b8;
+  --clr-gray-700: #cbd5e0;
+  --clr-surface:  #1e2840;
+}
+
+/* Light sections → dark */
+body.dark-mode .services,
+body.dark-mode .partner-benefits,
+body.dark-mode .app-showcase,
+body.dark-mode .testimonials { background: #0f1620; }
+
+/* White cards → dark surface */
+body.dark-mode .service-card,
+body.dark-mode .benefit-col,
+body.dark-mode .chart-card,
+body.dark-mode .testimonial-card,
+body.dark-mode .news-card,
+body.dark-mode .partner-col,
+body.dark-mode .resource-card,
+body.dark-mode .screen-mock {
+  background: #1a2233;
+  border-color: #2d3a4e;
+  box-shadow: 0 4px 20px rgba(0,0,0,.35);
+}
+body.dark-mode .faq-item { border-color: #2d3a4e; }
+body.dark-mode .faq-item.open { border-color: var(--clr-primary); }
+body.dark-mode .faq-q { color: #e2e8f0; }
+body.dark-mode .faq-a p { color: #94a3b8; }
+
+/* Map placeholder */
+body.dark-mode .map-placeholder { background: #1a2233; }
+
+/* Step icon */
+body.dark-mode .step-icon { background: #1a2233; }
+
+/* Step connector line */
+body.dark-mode .step-line { background: #2d3a4e; }
+
+/* Form inputs */
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea {
+  background: #1a2233;
+  border-color: #2d3a4e;
+  color: #e2e8f0;
+}
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder { color: #4a5568; }
+body.dark-mode input:focus,
+body.dark-mode select:focus,
+body.dark-mode textarea:focus { background: #1e2840; }
+
+/* Heading colours on `var(--clr-dark)` */
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3,
+body.dark-mode h4, body.dark-mode h5, body.dark-mode h6 { color: #e2e8f0; }
+
+/* Counters section already dark — no change needed */
+/* CTA download already green — no change needed */
+/* Footer already dark — no change needed */
+
+/* ===================================================
+   FORM STATUS TOAST NOTIFICATION
+   =================================================== */
+.ezygo-toast {
+  position: fixed;
+  top: calc(var(--header-h) + 16px);
+  right: 1.25rem;
+  z-index: 9998;
+  display: flex;
+  align-items: flex-start;
+  gap: .8rem;
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.1rem 1.35rem;
+  box-shadow: 0 8px 48px rgba(0,0,0,.18);
+  max-width: 360px;
+  min-width: 280px;
+  border-left: 4px solid var(--clr-primary);
+  transform: translateX(120%);
+  transition: transform .4s cubic-bezier(.22,.68,0,1.2), opacity .3s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+.ezygo-toast.show { transform: translateX(0); opacity: 1; pointer-events: auto; }
+.ezygo-toast.toast-error { border-left-color: #e53935; }
+.ezygo-toast-icon { font-size: 1.35rem; flex-shrink: 0; margin-top: 1px; }
+.ezygo-toast-icon.success { color: var(--clr-primary); }
+.ezygo-toast-icon.error { color: #e53935; }
+.ezygo-toast-body { flex: 1; min-width: 0; }
+.ezygo-toast-body strong { display: block; font-size: .93rem; font-weight: 700; color: var(--clr-dark); margin-bottom: .25rem; }
+.ezygo-toast-body p { font-size: .82rem; color: var(--clr-muted); margin: 0; line-height: 1.5; }
+.ezygo-toast-close {
+  margin-left: .25rem;
+  cursor: pointer;
+  color: var(--clr-muted);
+  font-size: 1.1rem;
+  background: none;
+  border: none;
+  padding: 0;
+  flex-shrink: 0;
+  line-height: 1;
+  transition: color var(--transition);
+}
+.ezygo-toast-close:hover { color: var(--clr-dark); }
+body.dark-mode .ezygo-toast { background: #1a2233; border-color: rgba(255,255,255,.12); }
+body.dark-mode .ezygo-toast.toast-error { border-left-color: #e53935; border-color: rgba(229,57,53,.3); }
+body.dark-mode .ezygo-toast-body strong { color: #f1f5f9; }
+
+@media (max-width: 480px) {
+  .ezygo-toast { right: .75rem; left: .75rem; max-width: none; }
+}
+
+/* ===================================================
+   WHATSAPP FLOATING BUTTON
+   =================================================== */
+.wa-float {
+  position: fixed;
+  bottom: 5.5rem;
+  right: 2rem;
+  width: 50px; height: 50px;
+  background: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 20px rgba(37,211,102,.45);
+  z-index: 900;
+  transition: transform .25s ease, box-shadow .25s ease;
+  text-decoration: none;
+}
+.wa-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 32px rgba(37,211,102,.6);
+}
+@media (max-width: 480px) {
+  .wa-float { bottom: 5rem; right: 1rem; width: 44px; height: 44px; font-size: 1.3rem; }
+}
