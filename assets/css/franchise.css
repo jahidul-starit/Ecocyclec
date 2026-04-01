@@ -1,0 +1,645 @@
+/* ===================================================
+   EzygoBD — Franchise Page Styles  (franchise.css)
+   =================================================== */
+
+/* ── Fade-up utility ─────────────────────────────── */
+.ff-fade {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity .65s ease, transform .65s ease;
+}
+.ff-fade.visible { opacity: 1; transform: translateY(0); }
+
+/* ===================================================
+   HERO
+   =================================================== */
+.fr-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+  background: #040e07;
+}
+
+.fr-hero-video {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+  filter: brightness(.45) saturate(1.2);
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+.fr-hero-video.loaded { opacity: 1; }
+
+.fr-hero-overlay {
+  position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(
+    175deg,
+    rgba(0,12,5,.35) 0%,
+    rgba(0,18,8,.55) 55%,
+    rgba(0,10,4,.8)  100%
+  );
+}
+
+/* Hero text */
+.fr-hero-content {
+  position: relative; z-index: 2;
+  text-align: center;
+  padding-top: calc(var(--header-h) + 3rem);
+  margin-bottom: 2.5rem;
+}
+.fr-hero-title {
+  font-size: clamp(2rem, 5vw, 3.6rem);
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.15;
+  margin-bottom: .75rem;
+}
+.fr-hero-title span { color: var(--clr-primary); }
+.fr-hero-sub {
+  font-size: clamp(.9rem, 1.5vw, 1.15rem);
+  color: rgba(255,255,255,.65);
+  max-width: 560px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Wave at bottom of hero */
+.fr-hero-wave {
+  position: absolute;
+  bottom: -1px; left: 0; right: 0; z-index: 3;
+  line-height: 0;
+}
+.fr-hero-wave svg { width: 100%; height: 80px; display: block; }
+
+/* ===================================================
+   FLOATING SELECTION CARD
+   =================================================== */
+.fr-card-wrapper {
+  position: relative; z-index: 2;
+  width: 100%;
+  padding-bottom: 7rem;
+}
+
+.fr-selection-card {
+  background: #fff;
+  border-radius: 28px;
+  padding: 2.5rem 2.5rem 2rem;
+  display: flex;
+  gap: 2.5rem;
+  box-shadow: 0 32px 80px rgba(0,0,0,.55), 0 8px 24px rgba(0,0,0,.25);
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+/* Each option column */
+.fr-option {
+  flex: 1;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+  transition: transform .35s ease;
+  cursor: pointer;
+}
+.fr-option:hover { transform: translateY(-6px); }
+
+/* Title — "FOCO" / "FOFO" */
+.fr-option-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin: 0;
+}
+.fr-option-title--green { color: var(--clr-primary); }
+
+/* Banner image/card */
+.fr-option-banner {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 28px rgba(0,0,0,.18);
+  transition: box-shadow .35s ease;
+}
+.fr-option:hover .fr-option-banner {
+  box-shadow: 0 16px 45px rgba(0,0,0,.28);
+}
+
+.fr-banner-bg {
+  background: linear-gradient(155deg, #014a1b 0%, #027a2c 40%, #03a63a 100%);
+  padding: 1.5rem 1.5rem 1.25rem;
+  position: relative;
+  overflow: hidden;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.fr-banner-bg--fofo {
+  background: linear-gradient(155deg, #014a1b 0%, #02702a 45%, #038a30 100%);
+}
+
+.fr-banner-kicker {
+  font-size: .72rem;
+  font-weight: 500;
+  color: rgba(255,255,255,.7);
+  margin-bottom: .5rem;
+  display: block;
+}
+
+.fr-banner-headline {
+  font-size: clamp(1.1rem, 2.2vw, 1.55rem);
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.2;
+  margin: 0;
+}
+.fr-banner-headline span {
+  color: #fde047;
+  font-size: 110%;
+}
+
+/* Decorative EV icon in banner */
+.fr-banner-ev-icon {
+  position: absolute;
+  bottom: -8px; right: 10px;
+  font-size: 5rem;
+  color: rgba(255,255,255,.12);
+  pointer-events: none;
+}
+.fr-banner-chart {
+  position: absolute;
+  top: 12px; right: 14px;
+  font-size: 2rem;
+  color: rgba(255,255,255,.2);
+  pointer-events: none;
+}
+
+.fr-banner-note {
+  font-size: .6rem;
+  color: rgba(255,255,255,.45);
+  margin-top: .5rem;
+  display: block;
+  text-align: right;
+}
+
+/* FOFO investment block */
+.fr-banner-invest {
+  margin-top: .75rem;
+  display: flex;
+  flex-direction: column;
+  gap: .1rem;
+}
+.fr-invest-label {
+  font-size: .65rem;
+  font-weight: 500;
+  color: rgba(255,255,255,.6);
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+.fr-invest-amount {
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: #fde047;
+}
+.fr-invest-units {
+  font-size: .7rem;
+  color: rgba(255,255,255,.55);
+}
+
+/* Description below banner */
+.fr-option-desc {
+  font-size: .82rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ===================================================
+   DETAIL SECTIONS (FOCO / FOFO)
+   =================================================== */
+.fr-detail {
+  background: #f0faf3;
+  padding: 5rem 0 4rem;
+}
+.fr-detail--alt {
+  background: #fff;
+}
+
+/* Header */
+.fr-detail-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.fr-detail-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  font-size: .78rem;
+  font-weight: 600;
+  padding: .35rem 1rem;
+  border-radius: 999px;
+  margin-bottom: 1rem;
+}
+.fr-detail-badge--green {
+  background: rgba(0,200,83,.12);
+  color: var(--clr-primary);
+}
+.fr-detail-badge--orange {
+  background: rgba(249,115,22,.12);
+  color: #f97316;
+}
+.fr-detail-title {
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  color: var(--clr-dark);
+  line-height: 1.2;
+  margin-bottom: .75rem;
+}
+.fr-detail-title span { color: var(--clr-primary); }
+.fr-detail--alt .fr-detail-title span { color: #f97316; }
+.fr-detail-sub {
+  font-size: .95rem;
+  color: #64748b;
+  max-width: 640px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ── Metrics strip ──────────────────────────────── */
+.fr-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3.5rem;
+}
+.fr-metric {
+  background: #fff;
+  border-radius: 18px;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  box-shadow: 0 4px 18px rgba(0,0,0,.06);
+  transition: transform .3s, box-shadow .3s;
+}
+.fr-detail--alt .fr-metric {
+  background: #f8fafc;
+}
+.fr-metric:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(0,0,0,.12);
+}
+.fr-metric-icon {
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  background: rgba(0,200,83,.12);
+  color: var(--clr-primary);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.2rem;
+  margin: 0 auto .9rem;
+}
+.fr-metric-icon--orange {
+  background: rgba(249,115,22,.12);
+  color: #f97316;
+}
+.fr-metric-val {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--clr-dark);
+  margin-bottom: .25rem;
+}
+.fr-metric-label {
+  display: block;
+  font-size: .78rem;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+/* ── How it works — Steps ─────────────────────────── */
+.fr-how {
+  margin-bottom: 3.5rem;
+}
+.fr-section-heading {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--clr-dark);
+  margin-bottom: 1.75rem;
+  text-align: center;
+}
+.fr-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+.fr-step {
+  background: #fff;
+  border-radius: 18px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: .85rem;
+  border: 1.5px solid transparent;
+  transition: border-color .3s, box-shadow .3s, transform .3s;
+}
+.fr-detail--alt .fr-step { background: #f8fafc; }
+.fr-step:hover {
+  border-color: rgba(0,200,83,.25);
+  box-shadow: 0 10px 28px rgba(0,0,0,.08);
+  transform: translateY(-4px);
+}
+.fr-step-num {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: var(--clr-primary);
+  color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+.fr-step-num--orange { background: #f97316; }
+.fr-step-body h4 {
+  font-size: .92rem;
+  font-weight: 700;
+  color: var(--clr-dark);
+  margin-bottom: .3rem;
+}
+.fr-step-body p {
+  font-size: .82rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── Benefits grid ────────────────────────────────── */
+.fr-benefits { margin-bottom: 2.5rem; }
+.fr-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+.fr-benefit-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 1.5rem;
+  transition: transform .3s, box-shadow .3s;
+  border: 1.5px solid transparent;
+}
+.fr-detail--alt .fr-benefit-card { background: #f8fafc; }
+.fr-benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(0,0,0,.1);
+  border-color: rgba(0,200,83,.2);
+}
+.fr-benefit-icon {
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--ic) 14%, transparent);
+  color: var(--ic);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+.fr-benefit-card h4 {
+  font-size: .92rem;
+  font-weight: 700;
+  color: var(--clr-dark);
+  margin-bottom: .4rem;
+}
+.fr-benefit-card p {
+  font-size: .82rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Detail CTA */
+.fr-detail-cta {
+  text-align: center;
+  padding-top: 1rem;
+}
+.btn-lg {
+  padding: .9rem 2.4rem;
+  font-size: .95rem;
+}
+
+/* ===================================================
+   COMPARISON TABLE
+   =================================================== */
+.fr-compare {
+  background: #f0faf3;
+  padding: 5rem 0;
+}
+
+.fr-table-wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.fr-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0,0,0,.08);
+}
+.fr-table thead {
+  background: var(--clr-dark);
+}
+.fr-table th {
+  padding: 1.1rem 1.25rem;
+  font-size: .85rem;
+  font-weight: 700;
+  color: #fff;
+  text-align: left;
+  letter-spacing: .3px;
+}
+.fr-table th:first-child {
+  border-radius: 18px 0 0 0;
+}
+.fr-table th:last-child {
+  border-radius: 0 18px 0 0;
+}
+.fr-th-badge {
+  display: inline-block;
+  padding: .2rem .65rem;
+  border-radius: 999px;
+  font-size: .75rem;
+  font-weight: 700;
+}
+.fr-th-badge--green {
+  background: rgba(0,200,83,.25);
+  color: #4ade80;
+}
+.fr-th-badge--orange {
+  background: rgba(249,115,22,.25);
+  color: #fb923c;
+}
+
+.fr-table td {
+  padding: .9rem 1.25rem;
+  font-size: .85rem;
+  color: #334155;
+  border-bottom: 1px solid #f1f5f9;
+}
+.fr-table tbody tr:last-child td { border-bottom: none; }
+.fr-table tbody tr:hover {
+  background: #f8fdfb;
+}
+.fr-highlight-green { color: var(--clr-primary); }
+.fr-highlight-orange { color: #f97316; }
+
+/* ===================================================
+   CONTACT / APPLY FORM
+   =================================================== */
+.fr-contact {
+  background: var(--clr-dark);
+  padding: 5rem 0;
+}
+.fr-contact-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.fr-contact-text h2 {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: .6rem;
+  line-height: 1.25;
+}
+.fr-contact-text p {
+  font-size: .9rem;
+  color: rgba(255,255,255,.55);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+.fr-contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: .65rem;
+}
+.fr-info-row {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  font-size: .85rem;
+  color: rgba(255,255,255,.7);
+}
+.fr-info-row i {
+  color: var(--clr-primary);
+  width: 18px;
+  text-align: center;
+}
+
+/* Form */
+.fr-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.fr-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.fr-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: .35rem;
+}
+.fr-form-group label {
+  font-size: .78rem;
+  font-weight: 600;
+  color: rgba(255,255,255,.5);
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+.fr-form-group input,
+.fr-form-group select,
+.fr-form-group textarea {
+  background: rgba(255,255,255,.08);
+  border: 1.5px solid rgba(255,255,255,.12);
+  border-radius: 10px;
+  padding: .7rem .9rem;
+  font-family: var(--ff);
+  font-size: .88rem;
+  color: #fff;
+  transition: border-color .25s, background .25s;
+  outline: none;
+}
+.fr-form-group input::placeholder,
+.fr-form-group textarea::placeholder {
+  color: rgba(255,255,255,.3);
+}
+.fr-form-group select { cursor: pointer; }
+.fr-form-group select option { color: #1a202c; background: #fff; }
+.fr-form-group input:focus,
+.fr-form-group select:focus,
+.fr-form-group textarea:focus {
+  border-color: var(--clr-primary);
+  background: rgba(255,255,255,.12);
+}
+.fr-submit-btn {
+  margin-top: .5rem;
+  width: 100%;
+}
+
+/* ===================================================
+   RESPONSIVE
+   =================================================== */
+@media (max-width: 1024px) {
+  .fr-metrics,
+  .fr-steps,
+  .fr-benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .fr-contact-inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .fr-selection-card {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1.75rem 1.25rem;
+  }
+  .fr-hero-content {
+    padding-top: calc(var(--header-h) + 2rem);
+    margin-bottom: 1.5rem;
+  }
+  .fr-table th,
+  .fr-table td {
+    padding: .7rem .85rem;
+    font-size: .8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .fr-metrics,
+  .fr-steps,
+  .fr-benefits-grid {
+    grid-template-columns: 1fr;
+  }
+  .fr-form-row {
+    grid-template-columns: 1fr;
+  }
+  .fr-card-wrapper {
+    padding-bottom: 5rem;
+  }
+  .fr-banner-bg {
+    min-height: 170px;
+    padding: 1.2rem;
+  }
+}

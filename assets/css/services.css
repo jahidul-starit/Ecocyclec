@@ -1,0 +1,423 @@
+/* ===================================================
+   EzygoBD — Services Page Styles  (services.css)
+   =================================================== */
+
+/* ── Fade-up utility ─────────────────────────────── */
+.sf-fade {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity .65s ease, transform .65s ease;
+}
+.sf-fade.visible { opacity: 1; transform: translateY(0); }
+
+/* ===================================================
+   HERO + FLOATING MENU CARD
+   =================================================== */
+.svc-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: #060f09;
+}
+
+/* Video background */
+.svc-hero-video {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  filter: brightness(.55) saturate(1.15);
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+.svc-hero-video.loaded { opacity: 1; }
+
+.svc-hero-overlay {
+  position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(
+    170deg,
+    rgba(0,12,5,.28)  0%,
+    rgba(0,18,8,.48) 60%,
+    rgba(0,10,4,.72) 100%
+  );
+}
+
+/* Wrapper that keeps the card centred under the header */
+.svc-menu-wrapper {
+  position: relative; z-index: 2;
+  width: 100%;
+  padding-top: calc(var(--header-h) + 3.5rem);
+  padding-bottom: 6rem;
+}
+
+/* ── The main white card ─────────────────────────── */
+.svc-menu-card {
+  background: #fff;
+  border-radius: 28px;
+  padding: 2.5rem 2rem;
+  display: flex;
+  gap: 0;
+  box-shadow: 0 32px 80px rgba(0,0,0,.55), 0 8px 24px rgba(0,0,0,.25);
+}
+
+/* Two columns */
+.svc-col { flex: 1; min-width: 0; }
+
+/* Column title ── "For Riders" / "For Partners" */
+.svc-col-title {
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+  font-weight: 700;
+  color: var(--clr-primary);
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: .55rem;
+}
+.svc-col-title i { font-size: 1rem; opacity: .8; }
+
+/* Vertical divider */
+.svc-divider {
+  width: 1px;
+  background: linear-gradient(180deg, transparent, #e2e8e4 20%, #e2e8e4 80%, transparent);
+  margin: 0 2rem;
+  flex-shrink: 0;
+}
+
+/* ===================================================
+   SERVICE CARD GRID
+   =================================================== */
+.svc-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 200px 200px;
+  gap: .75rem;
+}
+
+/* Tall (featured) card spans both rows */
+.svc-card--tall    { grid-row: span 2; }
+
+/* Base card */
+.svc-card {
+  display: block;
+  border-radius: 16px;
+  overflow: hidden;
+  text-decoration: none;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.svc-card:hover { transform: translateY(-5px) scale(1.015); box-shadow: 0 20px 45px rgba(0,0,0,.28); }
+.svc-card:hover .svc-card-icon-bg { opacity: .18; transform: translate(10px,-10px) scale(1.08); }
+
+/* Inner bg wrapper — fills full card height */
+.svc-card-bg {
+  width: 100%; height: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  padding: 1rem 1rem .9rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%;
+}
+
+/* Tag pill */
+.svc-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: .3rem;
+  background: rgba(255,255,255,.14);
+  backdrop-filter: blur(6px);
+  color: #fff;
+  font-size: .7rem;
+  font-weight: 600;
+  letter-spacing: .4px;
+  padding: .22rem .65rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.2);
+  width: fit-content;
+  margin-bottom: auto;
+}
+.svc-tag--accent  { background: rgba(0,200,83,.35); border-color: rgba(0,200,83,.55); }
+.svc-tag--gold    { background: rgba(245,158,11,.35); border-color: rgba(245,158,11,.55); }
+.svc-tag--blue    { background: rgba(0,180,216,.3); border-color: rgba(0,180,216,.5); }
+.svc-tag--teal    { background: rgba(20,184,166,.3); border-color: rgba(20,184,166,.5); }
+.svc-tag--orange  { background: rgba(239,68,68,.3); border-color: rgba(239,68,68,.5); }
+.svc-tag--purple  { background: rgba(139,92,246,.3); border-color: rgba(139,92,246,.5); }
+
+/* Card body text */
+.svc-card-body { position: relative; z-index: 2; }
+.svc-card-kicker {
+  font-size: .7rem;
+  font-weight: 500;
+  color: rgba(255,255,255,.6);
+  margin-bottom: .3rem;
+  letter-spacing: .3px;
+}
+.svc-card-headline {
+  font-size: clamp(.9rem, 1.6vw, 1.1rem);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.25;
+  margin: 0;
+}
+.svc-card-headline span { color: var(--clr-primary); }
+
+/* Perks list */
+.svc-card-perks {
+  list-style: none;
+  margin: .6rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+}
+.svc-card-perks li {
+  font-size: .72rem;
+  color: rgba(255,255,255,.72);
+  display: flex;
+  align-items: center;
+  gap: .35rem;
+}
+.svc-card-perks i { color: var(--clr-primary); font-size: .65rem; }
+
+/* Decorative large bg icon */
+.svc-card-icon-bg {
+  position: absolute;
+  bottom: -10px; right: -8px;
+  font-size: 5.5rem;
+  color: rgba(255,255,255,.07);
+  transition: opacity .3s, transform .4s;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ── Featured card extras ─── */
+.svc-pricing-row {
+  display: flex;
+  gap: .5rem;
+  margin-top: .7rem;
+  flex-wrap: wrap;
+}
+.svc-price-item {
+  display: flex;
+  flex-direction: column;
+  gap: .1rem;
+}
+.svc-price-label {
+  font-size: .62rem;
+  color: rgba(255,255,255,.5);
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+.svc-price-val {
+  font-size: .85rem;
+  font-weight: 700;
+  color: #fff;
+}
+.svc-price-divider {
+  width: 1px;
+  background: rgba(255,255,255,.2);
+  margin: .1rem 0;
+}
+.svc-ev-img {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  opacity: .18;
+  margin-top: auto;
+  position: relative;
+  z-index: 0;
+}
+
+/* Franchise note */
+.svc-franchise-note {
+  font-size: .72rem;
+  color: rgba(255,255,255,.65);
+  margin-top: .5rem;
+  line-height: 1.4;
+}
+.svc-franchise-note strong { color: #fbbf24; }
+.svc-franchise-note small { opacity: .7; }
+.svc-highlight { color: #4ade80; }
+
+/* Ads stats */
+.svc-ad-stats {
+  display: flex;
+  gap: .75rem;
+  margin-top: .6rem;
+  flex-wrap: wrap;
+}
+.svc-ad-stats span {
+  font-size: .72rem;
+  color: rgba(255,255,255,.65);
+  background: rgba(255,255,255,.1);
+  padding: .2rem .55rem;
+  border-radius: 999px;
+}
+.svc-ad-stats strong { color: #fff; }
+
+/* Bottom hero wave */
+.svc-hero-wave {
+  position: absolute;
+  bottom: -1px; left: 0; right: 0; z-index: 3;
+  line-height: 0;
+}
+.svc-hero-wave svg { width: 100%; height: 80px; display: block; }
+
+/* ===================================================
+   FULL SERVICE LIST
+   =================================================== */
+.svc-full-list {
+  background: #f0faf3;
+  padding: 5rem 0;
+}
+
+/* Category block */
+.svc-cat-block {
+  margin-bottom: 4rem;
+}
+.svc-cat-block:last-child { margin-bottom: 0; }
+
+.svc-cat-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+  padding-bottom: 1rem;
+  border-bottom: 1.5px solid rgba(0,200,83,.2);
+}
+.svc-cat-icon-wrap {
+  width: 48px; height: 48px;
+  border-radius: 12px;
+  background: var(--clr-primary);
+  display: flex; align-items: center; justify-content: center;
+  color: #fff;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+.svc-cat-icon-wrap--gold { background: #f59e0b; }
+.svc-cat-header h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--clr-dark);
+  margin: 0 0 .15rem;
+}
+.svc-cat-header p { font-size: .88rem; color: var(--clr-gray-500); margin: 0; }
+
+/* Detail card grid */
+.svc-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.svc-detail-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 1.5rem;
+  transition: transform .3s, box-shadow .3s;
+  border: 1.5px solid transparent;
+}
+.svc-detail-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(0,0,0,.1);
+  border-color: rgba(0,200,83,.25);
+}
+
+.svc-detail-icon {
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--ic) 14%, transparent);
+  color: var(--ic);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+.svc-detail-card h4 {
+  font-size: .95rem;
+  font-weight: 700;
+  color: var(--clr-dark);
+  margin-bottom: .5rem;
+}
+.svc-detail-card p {
+  font-size: .83rem;
+  color: var(--clr-gray-500);
+  line-height: 1.65;
+  margin-bottom: .9rem;
+}
+.svc-detail-badge {
+  display: inline-block;
+  font-size: .72rem;
+  font-weight: 600;
+  color: var(--clr-primary);
+  background: rgba(0,200,83,.1);
+  border-radius: 999px;
+  padding: .2rem .75rem;
+}
+
+/* ===================================================
+   CTA STRIP
+   =================================================== */
+.svc-cta-strip {
+  background: var(--clr-dark);
+  padding: 4.5rem 0;
+}
+.svc-cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.svc-cta-text h2 {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: .4rem;
+}
+.svc-cta-text p { font-size: .95rem; color: rgba(255,255,255,.6); margin: 0; }
+.svc-cta-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* ===================================================
+   RESPONSIVE
+   =================================================== */
+@media (max-width: 1100px) {
+  .svc-menu-card   { gap: 0; }
+  .svc-divider     { margin: 0 1.25rem; }
+  .svc-detail-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 860px) {
+  .svc-menu-card {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1.75rem 1.25rem;
+  }
+  .svc-divider {
+    width: 100%;
+    height: 1px;
+    margin: 0;
+    background: linear-gradient(90deg, transparent, #e2e8e4 20%, #e2e8e4 80%, transparent);
+  }
+  .svc-grid { grid-template-rows: 195px 195px; }
+}
+
+@media (max-width: 600px) {
+  .svc-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .svc-card--tall { grid-row: auto; }
+  .svc-card-bg    { min-height: 160px; }
+  .svc-detail-grid { grid-template-columns: 1fr; }
+  .svc-cta-inner  { flex-direction: column; text-align: center; }
+  .svc-cta-buttons { justify-content: center; }
+  .svc-menu-wrapper { padding-top: calc(var(--header-h) + 1.5rem); }
+}
