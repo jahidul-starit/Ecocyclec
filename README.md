@@ -1,139 +1,181 @@
+<div align="center">
+
+<img src="https://ezygobd.com/assets/images/logo.png" alt="EzygoBD Logo" width="100" />
+
 # EzygoBD — Bangladesh's #1 EV Rental Network
 
-A fully responsive, static multi-page website for **EzygoBD Electric** — Bangladesh's leading electric vehicle rental platform offering e-scooters, e-bikes, and e-rickshaws for personal commutes, last-mile deliveries, and corporate fleets.
+**A modern, full-stack PHP website for Bangladesh's leading electric vehicle rental platform.**
 
-## Live Pages
+[![Live Site](https://img.shields.io/badge/🌐_Live_Site-ezygobd.com-22c55e?style=for-the-badge)](https://ezygobd.com)
+[![PHP](https://img.shields.io/badge/PHP-8.x-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://php.net)
+[![CSS3](https://img.shields.io/badge/CSS3-Custom_Design-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://ezygobd.com)
+[![JavaScript](https://img.shields.io/badge/JavaScript-Vanilla_JS-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://ezygobd.com)
+[![License](https://img.shields.io/badge/License-All_Rights_Reserved-red?style=for-the-badge)](https://ezygobd.com)
 
-| Page | Description |
-|------|-------------|
-| `index.html` | Homepage — hero video, services grid, fleet showcase, stats, testimonials, FAQ, contact |
-| `pages/evs.html` | Our EVs — vehicle specs, comparison chart, fleet platform overview |
-| `pages/services.html` | Services — rental plans for riders & delivery partners |
-| `pages/about.html` | About Us — mission, vision, team, impact stats, corporate video |
-| `pages/franchise.html` | Franchise — FOCO & FOFO partnership models, comparison table, application form |
-| `pages/advertising.html` | Advertising — EV fleet branding, ad format cards, enquiry form |
+</div>
 
-## Tech Stack
+---
 
-- **HTML5** — semantic, accessible markup
-- **CSS3** — custom properties, grid/flexbox layouts, responsive breakpoints, animations
-- **Vanilla JavaScript** — IntersectionObserver animations, animated counters, carousel, form UX
-- **Google Fonts** — Poppins (300–900)
-- **Font Awesome 6.5.1** — icon library via CDN
+## 🌟 Overview
 
-No build tools, frameworks, or package managers required.
+**EzygoBD** connects riders, operators, and businesses across Bangladesh — reducing costs, emissions, and complexity. This website was built and delivered as a freelance project for **Ezygo Electric Limited**, providing:
 
-## Project Structure
+- 🛵 **EV Booking** — E-scooters, e-bikes, and e-rickshaws for personal and corporate use
+- 🤝 **Franchise Opportunities** — FOCO and FOFO partnership models
+- 📢 **Advertising** — EV fleet branding and ad formats
+- 🏢 **Corporate Fleets** — Last-mile delivery solutions
+
+> 🔗 **Live at:** [https://ezygobd.com](https://ezygobd.com)
+
+---
+
+## 📄 Pages
+
+| Page | File | Description |
+|------|------|-------------|
+| 🏠 Homepage | `index.php` | Hero section, services grid, fleet showcase, stats, testimonials, FAQ, contact |
+| 🛵 Our EVs | `evs.php` | Vehicle specs, comparison chart, Rent Our EV application form |
+| 🔧 Services | `services.php` | Rental plans for riders, delivery partners and corporate clients |
+| 👥 About Us | `about.php` | Mission, vision, team, impact stats, company story |
+| 🤝 Franchise | `franchise.php` | FOCO and FOFO models, comparison table, application form |
+| 📢 Advertising | `advertising.php` | EV fleet branding, ad format cards, enquiry form |
+| 📬 Contact | `contact.php` | Contact form, location, phone and WhatsApp integration |
+| ⚙️ Form Handler | `form-handler.php` | Backend PHP form processing |
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Usage |
+|-----------|-------|
+| **PHP 8.x** | Server-side rendering, form handling, reusable includes/components |
+| **CSS3** | Custom properties, Grid/Flexbox, responsive breakpoints, dark mode |
+| **Vanilla JavaScript** | GSAP animations, IntersectionObserver, animated counters, carousel |
+| **Font Awesome 6.5.1** | Icon library via CDN |
+| **Google Fonts (Poppins)** | Typography — weights 300–900 |
+
+### Key Features
+
+- 🌙 **Dark / Light Mode** toggle with localStorage persistence
+- 📱 **Fully Responsive** — mobile-first across all screen sizes
+- ⚡ **GSAP Animations** — smooth scroll-triggered transitions throughout
+- 🍞 **Toast Notifications** — real-time feedback on form submissions
+- 🔖 **OG Tags and Favicon** — social media sharing optimized
+- 🗂️ **Modular PHP Includes** — reusable `header.php` and `footer.php` components
+- 📋 **Document Checklist** — required documents for EV rental applications
+
+---
+
+## 📁 Project Structure
 
 ```
-EzygoBD/
-├── index.html                  # Homepage
+Ecocyclec/
+├── index.php               # Homepage
+├── about.php               # About Us
+├── advertising.php         # Advertising
+├── contact.php             # Contact
+├── evs.php                 # Our EVs
+├── form-handler.php        # PHP form processor
+├── franchise.php           # Franchise
+├── services.php            # Services
 ├── README.md
-├── pages/
-│   ├── about.html
-│   ├── advertising.html
-│   ├── evs.html
-│   ├── franchise.html
-│   └── services.html
+├── includes/
+│   ├── header.php          # Global header and nav
+│   └── footer.php          # Global footer
 └── assets/
     ├── css/
-    │   ├── styles.css          # Global / shared styles
+    │   ├── styles.css       # Global styles + dark mode
     │   ├── about.css
     │   ├── advertising.css
     │   ├── evs.css
     │   ├── franchise.css
     │   └── services.css
     ├── js/
-    │   ├── script.js           # Global / shared interactions
+    │   ├── script.js        # Global JS interactions
     │   ├── about.js
     │   ├── advertising.js
     │   ├── evs.js
     │   ├── franchise.js
     │   └── services.js
-    └── videos/
-        └── HUAIHAI Sparky Teaser.mp4
+    └── images/
 ```
 
-## Run Locally
+---
 
-No installation needed — just serve static files.
+## 🚀 Run Locally
 
-### Option 1: Python (built-in)
+> **Requirements:** PHP 8.x installed on your machine.
 
 ```bash
-cd EzygoBD
-python -m http.server 5500
+# Clone the repository
+git clone https://github.com/jahidul-starit/Ecocyclec.git
+cd Ecocyclec
+
+# Start PHP built-in server
+php -S localhost:8000
 ```
 
-Open [http://localhost:5500](http://localhost:5500)
+Open **http://localhost:8000** in your browser.
 
-### Option 2: VS Code Live Server
+---
 
-Install the **Live Server** extension, right-click `index.html` → "Open with Live Server".
-
-### Option 3: Node.js (npx)
-
-```bash
-npx serve .
-```
-
-## Deploy to VPS (Nginx)
-
-### 1. Upload files to server
-
-```bash
-scp -r index.html pages/ assets/ README.md user@your-server-ip:/var/www/ezygobd/
-```
-
-### 2. Nginx config
+## 🌐 Deployment (Nginx + PHP-FPM)
 
 ```nginx
 server {
     listen 80;
     server_name ezygobd.com www.ezygobd.com;
-
     root /var/www/ezygobd;
-    index index.html;
+    index index.php;
 
     location / {
         try_files $uri $uri/ =404;
     }
 
-    # Cache static assets
-    location ~* \.(css|js|mp4|jpg|png|webp|svg|ico|woff2)$ {
+    location ~ \.php$ {
+        include fastcgi_params;
+        fastcgi_pass unix:/run/php/php8.2-fpm.sock;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+    }
+
+    location ~* \.(css|js|jpg|png|webp|svg|ico|woff2)$ {
         expires 30d;
         add_header Cache-Control "public, immutable";
     }
-
-    # Gzip compression
-    gzip on;
-    gzip_types text/html text/css application/javascript;
-    gzip_min_length 256;
 }
 ```
 
-### 3. Enable & restart
+---
 
-```bash
-sudo ln -s /etc/nginx/sites-available/ezygobd /etc/nginx/sites-enabled/
-sudo nginx -t
-sudo systemctl restart nginx
-```
+## 🌍 Browser Support
 
-### 4. SSL (optional but recommended)
+| Browser | Version |
+|---------|---------|
+| Chrome | 111+ |
+| Firefox | 113+ |
+| Safari | 16.4+ |
+| Edge | 111+ |
 
-```bash
-sudo apt install certbot python3-certbot-nginx
-sudo certbot --nginx -d ezygobd.com -d www.ezygobd.com
-```
+---
 
-## Browser Support
+## 👨‍💻 Developer
 
-- Chrome 111+
-- Firefox 113+
-- Safari 16.4+
-- Edge 111+
+**Jahidul Islam** — Freelance Web Developer
 
-## License
+[![GitHub](https://img.shields.io/badge/GitHub-jahidul--starit-181717?style=flat-square&logo=github)](https://github.com/jahidul-starit)
 
-© 2026 EzygoBD. All rights reserved.
+> 💼 Available for freelance projects — building fast, responsive PHP and JavaScript websites for businesses across Bangladesh and beyond.
+
+---
+
+## 📃 License
+
+© 2026 **Ezygo Electric Limited**. All rights reserved.
+
+This project was built as a client freelance delivery. Source code is shared for portfolio purposes only.
+
+---
+
+<div align="center">
+  <strong>Built with ❤️ for a greener Bangladesh 🇧🇩</strong>
+</div>
