@@ -16,6 +16,24 @@
 
 ---
 
+## 📸 Screenshots
+
+<div align="center">
+
+| Services & Pricing | Franchise Opportunities |
+|:---:|:---:|
+| <img src="https://github.com/user-attachments/assets/e3f36627-f626-4421-8b47-a4957e315018" width="420" alt="Services Page"/> | <img src="https://github.com/user-attachments/assets/2d19b989-051f-40e4-8ca9-75a447a90308" width="420" alt="Franchise Page"/> |
+
+| Our Electric Fleet | Our Mission |
+|:---:|:---:|
+| <img src="https://github.com/user-attachments/assets/88d0a446-9e2a-415e-aeab-38e6608f6262" width="420" alt="EVs Page"/> | <img src="https://github.com/user-attachments/assets/c0e2f28f-6508-4453-b321-d736ffab6d1e" width="420" alt="About Page"/> |
+
+</div>
+
+---
+
+---
+
 ## 🌟 Overview
 
 **EzygoBD** connects riders, operators, and businesses across Bangladesh — reducing costs, emissions, and complexity. This website was built and delivered as a freelance project for **Ezygo Electric Limited**, providing:
